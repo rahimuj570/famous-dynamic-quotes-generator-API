@@ -60,7 +60,7 @@ const fetchApi = (indexNumber) => {
 const catchApi = (data) => {
   console.log(data.text);
   getElem("quote")[0].innerText = data.text;
-  getElem("author")[0].innerText = data.author;
+  getElem("author")[0].innerText = `(${data.author})`;
 };
 
 // ========== Random Handler ========
@@ -77,4 +77,10 @@ getElem("arrow-right")[0].addEventListener("click", () => {
 // ========== Previous Handler ========
 getElem("arrow-left")[0].addEventListener("click", () => {
   motherFunction(false);
+});
+
+// ========== Copy Handler ========
+getElem("copy-btn")[0].addEventListener("click", () => {
+  const quoteElem = getElem("block-quote")[1];
+  navigator.clipboard.writeText(quoteElem);
 });
