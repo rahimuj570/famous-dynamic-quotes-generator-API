@@ -50,6 +50,9 @@ main blockquote :nth-child(3) {
   right: 0;
   top: 0;
 }
+#author {
+  display: block;
+}
 #author::before {
   content: "__";
 }

@@ -9,7 +9,8 @@ const getElem = (idClass) => {
 };
 
 // ========== Try Another Handler ========
-getElem("try-another-btn")[0].addEventListener("click", () => {
+getElem("random-btn")[0].addEventListener("click", () => {
+  let i = Math.round(Math.random() * 1642);
   // ======== API Length =======
   const apiLength = () => {
     fetch(`https://type.fit/api/quotes`)
